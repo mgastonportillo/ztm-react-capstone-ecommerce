@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@300&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 8px;
+	font-family: "Encode Sans Condensed", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
