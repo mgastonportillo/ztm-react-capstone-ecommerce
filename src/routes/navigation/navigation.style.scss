@@ -23,6 +23,10 @@
 			cursor: pointer;
 			text-decoration: none;
 			color: black;
+
+			&:last-child {
+				white-space: nowrap;
+			}
 		}
 	}
 }
