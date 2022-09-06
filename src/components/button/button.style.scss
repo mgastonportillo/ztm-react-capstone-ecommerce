@@ -5,7 +5,7 @@
 	letter-spacing: 0.5px;
 	line-height: 50px;
 	padding: 0 35px 0 35px;
-	font-size: 14px;
+	font-size: 15px;
 	background-color: black;
 	color: white;
 	text-transform: uppercase;
@@ -15,6 +15,7 @@
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
+	white-space: nowrap;
 
 	&:hover {
 		background-color: white;
@@ -42,5 +43,21 @@
 			color: white;
 			border: none;
 		}
+	}
+}
+
+.buttons-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 420px) {
+	.button-container {
+		width: 100%;
+	}
+
+	.buttons-container {
+		flex-direction: column;
+		flex-wrap: wrap;
 	}
 }
