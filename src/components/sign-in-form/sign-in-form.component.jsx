@@ -33,14 +33,9 @@ const SignInForm = () => {
 		event.preventDefault();
 
 		try {
-<<<<<<< Updated upstream
 			const { user } = await signInUserWithEmailAndPassword(email, password);
 			setCurrentUser(user);
 			alert(`Welcome back!`);
-=======
-			const response = await signInUserWithEmailAndPassword(email, password);
-			alert("Welcome back!");
->>>>>>> Stashed changes
 			resetFormField();
 		} catch (error) {
 			switch (error.code) {
@@ -48,11 +43,7 @@ const SignInForm = () => {
 					alert("Incorrect password for email");
 					break;
 				case "auth/user-not-found":
-<<<<<<< Updated upstream
-					alert("No user associated with this email");
-=======
 					alert("No user linked to this email");
->>>>>>> Stashed changes
 					break;
 				default:
 					console.log(error);
