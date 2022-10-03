@@ -5,11 +5,11 @@
 	margin-bottom: 15px;
 
 	img {
-		width: 30%;
+		width: 60px;
+		object-fit: cover;
 	}
 
 	.item-details {
-		width: 70%;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
