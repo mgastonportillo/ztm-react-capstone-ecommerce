@@ -31,7 +31,7 @@ const Home = () => {
 	];
 
 	return (
-		<div className="home-container">
+		<div>
 			<Category categories={categories} />
 			<Outlet />
 		</div>
