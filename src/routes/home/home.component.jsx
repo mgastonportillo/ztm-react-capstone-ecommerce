@@ -32,7 +32,7 @@ const Home = () => {
 
 	return (
 		<div className="home-container">
-			<Category categories={categories} />;
+			<Category categories={categories} />
 			<Outlet />
 		</div>
 	);
