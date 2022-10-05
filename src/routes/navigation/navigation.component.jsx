@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect } from "react";
+import React, { Fragment, useContext } from "react";
 import { Outlet } from "react-router-dom";
 import CrwnLogo from "../../assets/crown.svg";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
@@ -15,17 +15,7 @@ import {
 
 const Navigation = () => {
 	const { currentUser } = useContext(UserContext);
-	const { isCartOpen, setIsCartOpen } = useContext(CartContext);
-
-	useEffect(() => {
-		const escHandler = (e) => {
-			if (e.key === "Escape") {
-				setIsCartOpen(false);
-			}
-		};
-		document.addEventListener("keydown", escHandler);
-		return () => document.removeEventListener("keydown", escHandler);
-	}, []);
+	const { isCartOpen } = useContext(CartContext);
 
 	return (
 		<Fragment>
