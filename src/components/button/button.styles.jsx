@@ -30,7 +30,7 @@ export const BaseButton = styled.button`
 	}
 
 	&:active {
-		transform: scale(0.9);
+		transform: scale(0.95);
 	}
 `;
 
