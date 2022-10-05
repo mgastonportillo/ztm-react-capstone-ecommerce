@@ -18,6 +18,7 @@ export const BaseButton = styled.button`
 	display: flex;
 	justify-content: center;
 	white-space: nowrap;
+	transition: all 0.1s ease-out;
 	@media screen and (max-width: 420px) {
 		width: 100%;
 	}
@@ -26,6 +27,10 @@ export const BaseButton = styled.button`
 		background-color: white;
 		color: black;
 		border: 1px solid black;
+	}
+
+	&:active {
+		transform: scale(0.9);
 	}
 `;
 
