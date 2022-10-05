@@ -7,6 +7,7 @@ export const SignInContainer = styled.div`
 `;
 
 export const SignInTitle = styled.h2`
+	font-weight: 600;
 	margin: 10px 0;
 `;
 
