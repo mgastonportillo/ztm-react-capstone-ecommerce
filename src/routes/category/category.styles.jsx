@@ -11,6 +11,6 @@ export const CategoryContainer = styled.div`
 export const CategoryTitle = styled.h2`
 	font-weight: 500;
 	font-size: 38px;
-	margin-bottom: 30px;
+	margin-bottom: 29px;
 	text-align: center;
 `;
