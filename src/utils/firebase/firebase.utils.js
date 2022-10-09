@@ -31,15 +31,15 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig);
 
-const provider = new GoogleAuthProvider();
-provider.setCustomParameters({
+const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
 	prompt: "select_account",
 });
 
 export const auth = getAuth();
 
 export const signInWithGooglePopup = () => {
-	return signInWithPopup(auth, provider);
+	return signInWithPopup(auth, googleProvider);
 };
 
 export const signInWithGoogleRedirect = () => {
@@ -68,6 +68,7 @@ export const getCategoriesAndDocuments = async () => {
 	const collectionRef = collection(db, "categories");
 	const q = query(collectionRef);
 
+	// await Promise.reject(new Error("new fake error, woops"));
 	const querySnapshot = await getDocs(q);
 
 	return querySnapshot.docs.map((docSnapshot) => docSnapshot.data());
@@ -75,7 +76,7 @@ export const getCategoriesAndDocuments = async () => {
 
 export const createUserDocumentFromAuth = async (
 	userAuth,
-	additionalInfo = {}
+	additionalDetails = {}
 ) => {
 	if (!userAuth) return;
 
@@ -92,14 +93,14 @@ export const createUserDocumentFromAuth = async (
 				displayName,
 				email,
 				createdAt,
-				...additionalInfo,
+				...additionalDetails,
 			});
 		} catch (error) {
 			console.log("error creating the user", error.message);
 		}
 	}
 
-	return userDocRef;
+	return userSnapshot;
 };
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
@@ -116,3 +117,16 @@ export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback) =>
 	onAuthStateChanged(auth, callback);
+
+export const getCurrentUser = () => {
+	return new Promise((resolve, reject) => {
+		const unsubscribe = onAuthStateChanged(
+			auth,
+			(userAuth) => {
+				unsubscribe();
+				resolve(userAuth);
+			},
+			reject
+		);
+	});
+};
