@@ -21,4 +21,5 @@
 <li>Redux-thunk</li>
 <li>Redux-saga</li>
 <li>GraphQL client</li>
+<li>Vite.js</li>
 </ul>
