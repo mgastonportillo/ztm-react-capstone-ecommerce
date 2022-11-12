@@ -27,16 +27,13 @@ const PaymentForm = () => {
 			alert('We cannot process a payment of 0');
 			setIsProcessingPayment(false);
 		} else {
-			const response = await fetch(
-				'/.netlify/functions/create-payment-intent',
-				{
-					method: 'post',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({ amount: amount * 100 }),
-				}
-			).then((response) => response.json());
+			const response = await fetch('/api/create-payment-intent', {
+				method: 'post',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ amount: amount * 100 }),
+			}).then((response) => response.json());
 
 			const {
 				paymentIntent: { client_secret },
