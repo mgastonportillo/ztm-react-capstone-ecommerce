@@ -27,7 +27,7 @@ const PaymentForm = () => {
 			alert('We cannot process a payment of 0');
 			setIsProcessingPayment(false);
 		} else {
-			const response = await fetch('/api/create-payment-intent', {
+			const response = await fetch('./api/create-payment-intent', {
 				method: 'post',
 				headers: {
 					'Content-Type': 'application/json',
