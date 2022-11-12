@@ -33,7 +33,12 @@ const PaymentForm = () => {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({ amount: amount * 100 }),
-			}).then((response) => response.json());
+			})
+				.then((response) => response.json())
+				.catch((error) => {
+					console.log(error);
+					setIsProcessingPayment(false);
+				});
 
 			const {
 				paymentIntent: { client_secret },
