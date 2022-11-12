@@ -3,7 +3,7 @@
 <hr>
 <h2>Preview</h2>
 <a align="center"><img src="https://user-images.githubusercontent.com/106234166/198903826-9ba88731-33da-4baf-9d1e-039dc40cbdaf.png"></a>
-<p><a href="https://ztm-react-capstone-ecommerce-mgastonportillo.vercel.app/">Live preview</a></p>
+<p><a href="https://ztm-react-course-mgastonportillo.netlify.app">Live preview</a></p>
 <hr>
 <h2>Concepts and technologies</h2>
 <ul>
