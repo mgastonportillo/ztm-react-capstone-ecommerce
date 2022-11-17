@@ -10,7 +10,9 @@
 <li>React.js</li>
 <li>Class components</li>
 <li>Functional components</li>
-<li>JavaScript ES6</li>
+<li>JavaScript: ES6</li>
+<li>TypeScript: Types, Interfaces, Function Overloading, Matchable Functions, Intersection Types, Union Types, Discriminating Unions, Type Predicate, Type Narrowing, ReturnType and more</li>
+<li>TypeScript in Redux</li>
 <li>SASS</li>
 <li>styled-components</li>
 <li>API consumption</li>
