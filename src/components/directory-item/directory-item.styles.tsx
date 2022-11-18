@@ -25,6 +25,14 @@ export const Body = styled.div`
 	opacity: 0.7;
 	position: absolute;
 
+	@media screen and (min-width: 490px) and (max-width: 600px) {
+		width: 24%;
+	}
+
+	@media screen and (max-width: 900px) {
+		max-width: 30%;
+	}
+
 	h2 {
 		font-weight: 600;
 		margin: 0 6px 0;

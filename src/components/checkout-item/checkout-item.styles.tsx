@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CheckoutItemContainer = styled.div`
 	width: 100%;
@@ -11,6 +11,14 @@ export const CheckoutItemContainer = styled.div`
 
 	> span {
 		width: 23%;
+
+		&:nth-child(2) {
+			width: 28%;
+		}
+
+		&:nth-child(4) {
+			width: 15%;
+		}
 	}
 `;
 

@@ -14,8 +14,10 @@ export const SignInTitle = styled.h2`
 export const ButtonsContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
-	@media screen and (max-width: 420px) {
+
+	@media screen and (max-width: 480px) {
 		flex-direction: column;
 		flex-wrap: wrap;
+		row-gap: 10px;
 	}
 `;
