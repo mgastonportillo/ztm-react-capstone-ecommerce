@@ -41,7 +41,8 @@ export const ProductCardContainer = styled.div`
 			display: flex;
 
 			@media screen and (max-width: 900px) {
-				opacity: 0.9;
+				opacity: unset;
+				display: block;
 			}
 		}
 	}

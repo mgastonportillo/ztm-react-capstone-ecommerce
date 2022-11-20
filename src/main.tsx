@@ -7,11 +7,9 @@ import { Elements } from '@stripe/react-stripe-js';
 import { stripePromise } from './utils/stripe/stripe.utils';
 import App from './App';
 import { store, persistor } from './store/store';
-import { GlobalStyle } from './global.styles.js';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<GlobalStyle />
 		<Provider store={store}>
 			<PersistGate persistor={persistor}>
 				<BrowserRouter>
